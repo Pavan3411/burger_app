@@ -1,0 +1,31 @@
+
+print("welcome to burger application")
+burger = input("Which burger do you want 'm','n','l'").upper()
+mushroom = input("Do you want to add mushroom 'Y'  'N'").upper()
+cheese = input("Do you want extra cheese 'Y' _or 'N'").upper()
+bill = 0
+
+if burger == 'M':
+    bill += 5
+if burger == 'N':
+    bill += 8
+if burger == 'L':
+    bill += 10
+    if mushroom == 'Y':
+        bill += 2
+    if cheese == 'Y':
+        bill += 2
+if burger == 'XL':
+    bill += 15
+    if mushroom == 'Y':
+        bill += 2
+    if cheese == 'Y':
+        bill += 2
+else:
+    if mushroom == 'Y':
+        bill += 1
+    if cheese == 'Y':
+        bill += 1
+
+
+print(bill)
